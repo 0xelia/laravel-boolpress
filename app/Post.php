@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Post extends Model
 {
@@ -26,4 +27,8 @@ class Post extends Model
     public function tags(){
         return $this->belongsToMany('App\Tag');
     }
+
+    // public function getCoverPathAttribute(){
+    //     return $this->cover ? Storage::url($this->cover) : null;
+    // }
 }

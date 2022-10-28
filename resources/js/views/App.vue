@@ -1,13 +1,17 @@
 <template>
     <div>
-        <h1>           
-            {{ title }} 
-        </h1>
-        <ul>
-            <li v-for="post in posts" :key="post.id">
-                {{post.title}}
-            </li>
-        </ul>
+        <div class="container">
+            
+            <h1>           
+                {{ title }} 
+            </h1>
+            <ul>
+                <li v-for="post in posts" :key="post.id">
+                    {{post.title}}
+                </li>
+            </ul>
+
+        </div>
     </div>
 </template>
 
@@ -23,7 +27,7 @@
         methods: {
             fetchPosts(){
                 axios.get('/api/posts').then((res)=> {
-                    const {posts} = res.data
+                    const { posts } = res.data
                     this.posts = posts
 
                     console.log(posts)
@@ -40,5 +44,6 @@
 <style lang="scss" scoped>
     #app{
         font-family: 'Poppins' !important;
+        background-color: aqua;
     }
 </style>

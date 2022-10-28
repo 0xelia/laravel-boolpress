@@ -74,7 +74,7 @@ class PostController extends Controller
         $params['user_id'] = Auth::id();
 
         if(array_key_exists('cover', $params)){
-            $cover_path = Storage::put('uploads', $params['cover']);
+            $cover_path = Storage::put('uploads',  $params['cover']);
             $params['cover'] = $cover_path;
         }
 

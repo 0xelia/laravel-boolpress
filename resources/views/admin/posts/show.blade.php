@@ -8,6 +8,8 @@
             {{ $post['title'] }}
         </h1>
 
+
+
         <div class="post_cover">
             <img src="{{ asset('storage/' . $post->cover) }}" alt="">
         </div>

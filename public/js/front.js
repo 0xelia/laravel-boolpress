@@ -1946,11 +1946,13 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_c("h1", [_vm._v("           \n        " + _vm._s(_vm.title) + " \n    ")]), _vm._v(" "), _c("ul", _vm._l(_vm.posts, function (post) {
+  return _c("div", [_c("div", {
+    staticClass: "container"
+  }, [_c("h1", [_vm._v("           \n            " + _vm._s(_vm.title) + " \n        ")]), _vm._v(" "), _c("ul", _vm._l(_vm.posts, function (post) {
     return _c("li", {
       key: post.id
-    }, [_vm._v("\n            " + _vm._s(post.title) + "\n        ")]);
-  }), 0)]);
+    }, [_vm._v("\n                " + _vm._s(post.title) + "\n            ")]);
+  }), 0)])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
@@ -1970,7 +1972,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#app[data-v-91ac6b5c] {\n  font-family: \"Poppins\" !important;\n}", ""]);
+exports.push([module.i, "#app[data-v-91ac6b5c] {\n  font-family: \"Poppins\" !important;\n  background-color: aqua;\n}", ""]);
 
 // exports
 
@@ -15141,7 +15143,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/eliavanon/Desktop/ESERCIZI BOOLEAN/laravel-many-to-many/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/eliavanon/Desktop/ESERCIZI BOOLEAN/laravel-api/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })
