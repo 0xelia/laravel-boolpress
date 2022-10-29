@@ -111,6 +111,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
+        if($post->user_id != Auth::id())
+            abort(403, "Non hai i permessi per modificare questo post");
+
         $categories = Category::all();
         $tags = Tag::orderBy('name', 'asc')->get();
         return view('admin.posts.edit', compact('post', 'categories', 'tags'));

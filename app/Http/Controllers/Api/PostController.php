@@ -15,9 +15,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'desc')->with('category', 'category.posts', 'tags', 'user')->get();
+        $results = Post::orderBy('created_at', 'desc')->with('category', 'category.posts', 'tags', 'user')->paginate(15);
+        $success = true;
 
-        return response()->json(compact('posts'));
+        return response()->json(compact('results', 'success'));
     }
 
     /**
