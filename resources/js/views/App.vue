@@ -1,11 +1,9 @@
 <template>
     <div class="app">
-        <div class="container px-2 sm:px-0">
+        <MainHeader/>
+        <div class="container mx-auto px-2 sm:px-0">
             
-            <h1>           
-                {{ title }} 
-            </h1>
-            <ul class="post_grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+            <ul class="post_grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 <li v-for="post in posts" class="post_card shadow-md" :key="post.id">
                     <PostCard :post="post"/>
                 </li>
@@ -21,11 +19,12 @@
 <script>
 import PostCard from '../components/PostCard.vue';
 import PageNav from '../components/PageNav.vue';
+import MainHeader from '../components/MainHeader.vue';
 
     export default {
     data() {
         return {
-            title: "Bentornato JS",
+            title: "BoolPress",
             posts: [],
             currentPage: 1,
             lastPage: 0,
@@ -35,7 +34,8 @@ import PageNav from '../components/PageNav.vue';
 
     components: { 
         PostCard,
-        PageNav
+        PageNav,
+        MainHeader
     },
 
     methods: {
@@ -50,6 +50,8 @@ import PageNav from '../components/PageNav.vue';
                 this.posts = data,
                 this.lastPage = last_page,
                 this.currentPage = current_page
+
+                console.log(this.posts)
             });
         },
 
@@ -78,7 +80,7 @@ import PageNav from '../components/PageNav.vue';
             
 
             .post_card{
-                height: 100%;
+                min-height: 500px;
 
                 //border: solid lightgray 1px;
                 border-radius: 12px;

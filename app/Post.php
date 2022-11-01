@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 
 class Post extends Model
 {
@@ -31,4 +32,17 @@ class Post extends Model
     // public function getCoverPathAttribute(){
     //     return $this->cover ? Storage::url($this->cover) : null;
     // }
+
+    public function getDateAttribute(){
+        return Carbon::parse($this->created_at)->format('d-m-Y'); 
+    }
+
+    public function getStringDateAttribute(){
+        return Carbon::create($this->created_at)->diffForHumans();
+    }
+
+    protected $appends = [
+        'date',
+        'string_date'
+    ];
 }

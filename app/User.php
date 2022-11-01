@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'profile_pic'
     ];
 
     public function posts(){
@@ -30,6 +31,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getCreateDateAttribute(){
+        return Carbon::parse($this->created_at)->format('d M Y'); 
+    }
+    public function getUpdateDateAttribute(){
+        return Carbon::parse($this->updated_at)->format('d M Y'); 
+    }
 
     /**
      * The attributes that should be cast to native types.

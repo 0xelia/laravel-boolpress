@@ -78,7 +78,7 @@
                         </td>
 
                         <td>
-                            {{ $p['created_at'] }}
+                            {{ $p->date }}
                         </td>
 
                         <td>

@@ -8,14 +8,12 @@
             {{ $post['title'] }}
         </h1>
 
-
-
         <div class="post_cover">
             <img src="{{ asset('storage/' . $post->cover) }}" alt="">
         </div>
 
         <p class="mr-2">
-            Created at: {{$post['created_at']}}
+            Created at: {{$post->date}}
         </p>
 
         <p class="mr-2">
@@ -45,20 +43,23 @@
             {{ $post['content'] }}
         </p>
 
-        <div class="row justify-content-end align-items-center">
-            <a href="{{route('admin.posts.edit', $post)}}">
-                <button type="button" style="margin-right: 10px" class="btn btn-primary">Edit Post</button>
-            </a>
+        @if ($post->user['id'] == Auth::id())
+            
+            <div class="row justify-content-end align-items-center">
+                <a href="{{route('admin.posts.edit', $post)}}">
+                    <button type="button" style="margin-right: 10px" class="btn btn-primary">Edit Post</button>
+                </a>
 
-            <form action="{{ route('admin.posts.destroy', $post) }}" method="post">
+                <form action="{{ route('admin.posts.destroy', $post) }}" method="post">
 
-                @csrf
-                @method('DELETE')
-                
-                <input type="submit" class="btn btn-outline-danger" value="Delete Post">
+                    @csrf
+                    @method('DELETE')
 
-            </form>
-        </div>
+                    <input type="submit" class="btn btn-outline-danger" value="Delete Post">
+
+                </form>
+            </div>
+        @endif
 
         @if ($post->category)
         <h4 class="display-6">
