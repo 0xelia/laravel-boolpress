@@ -1,10 +1,12 @@
 <template>
     <div class="app">
+        <MainHeader/>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
+        import MainHeader from '../components/MainHeader.vue';
 
     export default {
     data() {
@@ -17,6 +19,9 @@
         };
     },
 
+    components: {
+        MainHeader
+    }
 }
 </script>
 

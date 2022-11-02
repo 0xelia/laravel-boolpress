@@ -1,6 +1,5 @@
 <template>
     <section>
-        <MainHeader/>
         <div class="container">
             <h1 class="text-center">
                 {{title}}
@@ -10,7 +9,6 @@
 </template>
 
 <script>
-    import MainHeader from '../components/MainHeader.vue';
 
     export default {
         data(){
@@ -18,7 +16,6 @@
                 title: 'This is the home'
             }
         },
-        components: { MainHeader }
 }
 </script>
 

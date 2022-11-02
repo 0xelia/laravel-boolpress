@@ -1,6 +1,5 @@
 <template>
     <div>
-        <MainHeader/>
         <div class="container mx-auto px-2 sm:px-0">
             
             <ul class="post_grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -17,7 +16,6 @@
 </template>
 
 <script>
-    import MainHeader from '../components/MainHeader.vue';
     import PostCard from '../components/PostCard.vue';
     import PageNav from '../components/PageNav.vue';
     export default {
@@ -32,7 +30,6 @@
         components: { 
         PostCard,
         PageNav,
-        MainHeader
     },
 
     methods: {

@@ -9,7 +9,7 @@ const routes = [
     },
     {
         path: '/posts',
-        name: 'posts.index',
+        name: 'posts-index',
         component: PostsIndex
     }
 ]
