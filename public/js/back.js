@@ -104,7 +104,7 @@ console.log('hello backend');
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/eliavanon/Desktop/ESERCIZI BOOLEAN/laravel-api/resources/js/back.js */"./resources/js/back.js");
+module.exports = __webpack_require__(/*! /Users/eliavanon/Desktop/ESERCIZI BOOLEAN/laravel-boolpress/resources/js/back.js */"./resources/js/back.js");
 
 
 /***/ })

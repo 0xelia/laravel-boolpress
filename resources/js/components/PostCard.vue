@@ -1,5 +1,5 @@
 <template>
-        <div class="card_wrapper group flex h-full flex-col">
+        <div class="card_wrapper  group flex  h-full flex-col">
             <figure v-if="post.cover" class="post_cover -mx-4 h-1/2 overflow-hidden -mt-4">
                 <img  class="h-full object-cover object-bottom" :src="`storage/${post.cover}`" alt="">
             </figure>
