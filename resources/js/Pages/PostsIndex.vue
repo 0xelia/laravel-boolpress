@@ -3,9 +3,11 @@
         <div class="container mx-auto px-2 sm:px-0">
             
             <ul class="post_grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                <li v-for="post in posts" class="post_card min-h-600 overflow-hidden rounded p-4 shadow-md" :key="post.id">
-                    <PostCard :post="post"/>
-                </li>
+                <router-link v-for="post in posts" :key="post.id" :to="{ name: 'posts-show', params: { slug: post.slug } }">
+                    <li  class="post_card min-h-600 overflow-hidden flex flex-col rounded p-4 shadow-md">
+                        <PostCard :post="post"/>
+                    </li>
+                </router-link>
             </ul>
 
             <div class="pagination_wrapper flex justify-center py-8">
@@ -45,7 +47,7 @@
                 this.lastPage = last_page,
                 this.currentPage = current_page
 
-                console.log(this.posts)
+                ///console.log(this.posts)
             });
         },
 
@@ -60,6 +62,7 @@
 
     beforeMount() {
         this.fetchPosts();
+        console.log(this)
     },
     }
 </script>

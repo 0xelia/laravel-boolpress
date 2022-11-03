@@ -41,8 +41,13 @@ class Post extends Model
         return Carbon::create($this->created_at)->diffForHumans();
     }
 
+    public function getCoverPathAttribute(){
+        return $this->cover? Storage::url($this->cover) : null;
+    }
+
     protected $appends = [
         'date',
-        'string_date'
+        'string_date',
+        'cover_path'
     ];
 }

@@ -29,8 +29,8 @@
 
                         <div v-for="(i) in 3" :key="i"  :class="[ i === 2 ? 'w-6' : 'w-8' ,'h-0.5  bg-slate-500']"></div>
                     </div>
-                    <div :class="[dropdown ? 'block' : 'hidden' ,'dropdown fixed flex justify-end inset-0 bg-white/30 backdrop-blur-sm']">
-                        <div :class="[dropdown ? 'animate__animated animate__slideInRight' : 'animate__animated animate_slideOutRight' ,'dropdown flex flex-col relative z-10 transition-all translate-x-full duration-1000 h-full relative w-3/4 bg-blue-700']">
+                    <div :class="[dropdown ? 'block' : 'hidden' ,'dropdown fixed z-50 flex justify-end inset-0 bg-white/30 backdrop-blur-sm']">
+                        <div :class="[dropdown ? 'animate__animated animate__slideInRight' : 'animate__animated animate_slideOutRight' ,'dropdown flex flex-col relative  transition-all translate-x-full duration-1000 h-full relative w-3/4 bg-blue-700']">
                             <div class="dropdown_body grow">
 
                                 <i @click="hideDropDown()"  class="fa-solid fa-x absolute top-0 left-0 p-8 text-white"></i>
