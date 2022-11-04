@@ -43,15 +43,15 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($posts as $p)
+                @foreach ($posts as $p);
 
                     <tr>
                         <td>
-                            {{ $p['id'] }}
+                            {{ $p->id }}
                         </td>
                         <td>
                             <a class="text-reset" href="{{ route('admin.posts.show', $p) }}">
-                                {{ $p['title'] }}
+                                {{ $p->title }}
                             </a>
                         </td>
                         <td class="text-center">
@@ -89,15 +89,17 @@
                                         Edit Post
                                     </button>
                                 </a>
+
+                                <delete-button id="{{$p->id}}" title="{{$p->title}}"></delete-button>
     
-                                <form action="{{ route('admin.posts.destroy', $p) }}" method="post">
+                                {{-- <form action="{{ route('admin.posts.destroy', $p) }}" method="post">
 
                                     @csrf
                                     @method('DELETE')
                                     
                                     <input type="submit" class="btn btn-outline-danger btn-sm" value="Delete Post">
 
-                                </form>
+                                </form> --}}
 
                             </div>
 

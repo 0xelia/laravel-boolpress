@@ -8,9 +8,10 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap" rel="stylesheet">
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="https://cdn.tailwindcss.com"></script>
 
         <!-- Styles -->
         <style>
@@ -76,10 +77,10 @@
             }
         </style>
     </head>
-    <body>
+    <body class="bg-blue-500">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right flex gap-8 font-bold text-white">
                     @auth
                         <a href="{{ route('admin.home') }}">Home</a>
                     @else
@@ -94,21 +95,33 @@
 
             <div class="content">
                 <div class="title_wrapper">
-                    <div class="title animate__animated animate__slideInLeft m-b-md">
+                    <div class="title animate__animated animate__slideInLeft text-white m-b-md">
                         BOOLPRESS
                     </div>
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <ul class="flex gap-24 text-white font-bold">
+                    <li>
+                        <a href="#">
+                            Prova Button
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Prova Button
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Prova Button
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Prova Button
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </body>
