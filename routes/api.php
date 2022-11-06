@@ -20,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::resource('posts', 'Api\PostController')->parameters(['posts' => 'slug'])->only(['index', 'show']);
+
+Route::resource('users', 'Api\UserController')->only(['index', 'show']);

@@ -2,6 +2,7 @@ import home from '../Pages/home.vue'
 import PostsIndex from '../Pages/PostsIndex.vue';
 import PostShow from '../Pages/PostShow.vue';
 import Error404 from '../Pages/Error404.vue';
+import AuthorsIndex from '../Pages/authors.index.vue';
 
 const routes = [
     {
@@ -21,9 +22,14 @@ const routes = [
         props: true
     },
     {
-        path: '/posts/*',
+        path: '/*',
         name: '404',
         component: Error404,
+    },
+    {
+        path: '/authors',
+        name: 'authors.index',
+        component: AuthorsIndex,
     }
 ]
 

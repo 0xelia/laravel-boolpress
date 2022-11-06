@@ -73,7 +73,7 @@
                 nav: [
                     {
                         text: 'Authors',
-                        name: 'authors-index',
+                        name: 'authors.index',
                     },
                     {
                         text: 'Categories',

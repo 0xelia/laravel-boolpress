@@ -11,6 +11,18 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+
+//font awsome icons
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+//import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-regular-svg-icons'
+
+library.add(faStar)
+
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 // /**
 //  * The following block of code may be used to automatically register your
 //  * Vue components. It will recursively scan this directory for the Vue

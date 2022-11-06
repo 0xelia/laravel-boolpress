@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-4 d-flex justify-content-center align-items-center">
                 <figure class="profile_pic_container w-50 flex-shrink-0 ">
-                    <img style="aspect-ratio:1" class="img-fluid embed-responsive embed-responsive-1by1 border border-dark rounded-circle" src="{{ $user->profile_pic ? $user->profile_pic : asset('storage/uploads/user-solid.svg') }}" alt="">
+                    <img style="aspect-ratio:1; object-fit: cover; object-position:center" class="img-fluid embed-responsive embed-responsive-1by1 border border-dark rounded-circle" src="{{ $user->profile_pic ? $user->profile_pic_path  : asset('storage/uploads/user-solid.svg') }}" alt="">
                 </figure>
             </div>
             <div class="col-8 d-flex flex-column justify-content-center">
